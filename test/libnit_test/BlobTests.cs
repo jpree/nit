@@ -24,7 +24,7 @@
         /// </summary>
         public BlobTests()
         {
-            NitPath.OverrideRootFolder($".\\{nameof(BlobTests)}");
+            NitPath.OverrideRootFolder(Path.Join(".", $"{nameof(BlobTests)}"));
 
             try
             {
@@ -40,7 +40,7 @@
         [Fact]
         public void BlobWriteAndReadFromIndex()
         {
-            Blob.Write(".\\Resources\\BlobWriteAndReadFromIndex.txt");
+            Blob.Write(Path.Join(".","Resources", "BlobWriteAndReadFromIndex.txt"));
             Assert.True(Blob.IsValid(this.target));
 
             var contents = Blob.Read(this.target);
@@ -51,7 +51,7 @@
         [Fact]
         public void BlobWriteAndReadFromIndexLimitedAsString()
         {
-            Blob.Write(".\\Resources\\BlobWriteAndReadFromIndex.txt");
+            Blob.Write(Path.Join(".", "Resources", "BlobWriteAndReadFromIndex.txt"));
             Assert.True(Blob.IsValid(this.target));
 
             var contents = Blob.Read(this.target, 5);

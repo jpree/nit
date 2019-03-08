@@ -11,7 +11,7 @@
     {
         public NitPathTests()
         {
-            NitPath.OverrideRootFolder($".\\{nameof(NitPathTests)}");
+            NitPath.OverrideRootFolder(Path.Join(".", $"{nameof(NitPathTests)}"));
 
             try
             {
@@ -28,7 +28,7 @@
         public void GetBlobRootTest()
         {
             var result = NitPath.GetBlobRoot("obj");
-            Assert.Equal($".\\{nameof(NitPathTests)}\\obj", result);
+            Assert.Equal(Path.Join(".", $"{nameof(NitPathTests)}", "obj"), result);
         }
 
         [Fact]
@@ -49,14 +49,15 @@
         public void GetFullPathTest()
         {
             var result = NitPath.GetFullObjectPath(new byte[] { 0x01, 0x02, 0x03, 0x04 });
-            Assert.Equal($".\\{nameof(NitPathTests)}\\obj\\0102\\0304", result);
+            var x = Path.Combine(".", $"{nameof(NitPathTests)}", "obj", "0102", "0304");
+            Assert.Equal(Path.Combine(".", $"{nameof(NitPathTests)}", "obj", "0102", "0304"), result);
         }
 
         [Fact]
         public void GetDirectoryPathTest()
         {
             var result = NitPath.GetObjectDirectoryPath(new byte[] { 0x01, 0x02, 0x03, 0x04 });
-            Assert.Equal($".\\{nameof(NitPathTests)}\\obj\\0102", result);
+            Assert.Equal(Path.Combine(".", $"{nameof(NitPathTests)}", "obj", "0102"), result);
         }
     }
 }

@@ -22,7 +22,7 @@
         /// </summary>
         public TagTests()
         {
-            NitPath.OverrideRootFolder($".\\{nameof(TagTests)}");
+            NitPath.OverrideRootFolder(Path.Join(".", $"{nameof(TagTests)}"));
 
             try
             {
@@ -38,7 +38,7 @@
         [Fact]
         public void CreateTagIndex()
         {
-            var expectedFilePath = $".\\{nameof(TagTests)}\\tag\\532E\\AABD9574880DBF76B9B8CC00832C20A6EC113D682299550D7A6E0F345E25";
+            var expectedFilePath = Path.Combine(".", $"{nameof(TagTests)}", "tag", "532E", "AABD9574880DBF76B9B8CC00832C20A6EC113D682299550D7A6E0F345E25");
             var tag = "Test";
             var tags = new List<string>();
             tags.Add(tag);

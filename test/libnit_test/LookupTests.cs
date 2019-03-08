@@ -32,7 +32,7 @@
 
         public LookupTests()
         {
-            NitPath.OverrideRootFolder($".\\{nameof(LookupTests)}");
+            NitPath.OverrideRootFolder(Path.Join(".", $"{nameof(LookupTests)}"));
 
             try
             {
@@ -45,7 +45,7 @@
             }
 
             // create test tags in bulk
-            var testSet = File.ReadAllText(".\\Resources\\Poem.txt");
+            var testSet = File.ReadAllText(Path.Join(".", "Resources", "Poem.txt"));
             var tagSet = testSet.Split(' ');
             Tag.CreateTags(this.target2, tagSet);
             Tag.CreateTags(this.target3, tagSet);
