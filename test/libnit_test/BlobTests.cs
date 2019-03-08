@@ -40,7 +40,7 @@
         [Fact]
         public void BlobWriteAndReadFromIndex()
         {
-            Blob.Write(Path.Join(".","Resources", "BlobWriteAndReadFromIndex.txt"));
+            Blob.Write(Path.Join(".", "Resources", "BlobWriteAndReadFromIndex.txt"));
             Assert.True(Blob.IsValid(this.target));
 
             var contents = Blob.Read(this.target);
