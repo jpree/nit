@@ -1,6 +1,6 @@
 language: csharp
 mono: none
-dotnet: 2.2.104
+dotnet: 2.2.103
 solution: libnit.sln
 script:
  - dotnet restore
