@@ -48,7 +48,7 @@ namespace LibNitTest
         [Fact]
         public void HashFileSingle()
         {
-            var hash = Hash.HashFile(Path.Join(".", "resources\\HashFileSingle.txt"));
+            var hash = Hash.HashFile(Path.Join(".", "resources", "HashFileSingle.txt"));
             Assert.True(hash.SequenceEqual(this.target));
         }
   }
