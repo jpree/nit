@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "nit-node": {
+      "commandName": "Project",
+      "commandLineArgs": " -t \"Jared James\" -t school -p"
+    }
+  }
+}

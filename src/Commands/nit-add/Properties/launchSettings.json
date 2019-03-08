@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "nit-add": {
+      "commandName": "Project",
+      "commandLineArgs": "-m \"This is some special test to save\" -t \"tag1 tag2 tag3 tag4\""
+    }
+  }
+}

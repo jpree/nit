@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "nit": {
+      "commandName": "Project",
+      "commandLineArgs": "cat-file 4969C5866342DD39D2A5ECF638E94AE85C1A70711AF8BB17707884CE5FBA74F0 -e",
+      "workingDirectory": "C:\\Users\\Jeremy\\source\\repos\\libnit\\bin"
+    }
+  }
+}
