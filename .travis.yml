@@ -4,12 +4,12 @@ sudo: required
 dist: xenial
 dotnet: 2.2
 solution: libnit.sln
-script:
- - dotnet build -c release
- - dotnet test
- stages:
-  - name: deploy
-    # require the branch name to be master (note for PRs this is the base branch name)
-    if: branch = master
-      script:
-       - dotnet pack -c release
+jobs:
+  include:
+    - stage: build
+      script: dotnet build -c release
+    - stage: test
+      script: dotnet test
+    - stage: deploy
+      if: branch = master
+      script: dotnet pack -c release
