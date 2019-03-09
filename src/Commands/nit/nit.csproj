@@ -1,12 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <PackAsTool>true</PackAsTool>
     <RootNamespace>nit</RootNamespace>
-    <Configurations>Debug;Release;</Configurations>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>C:\Users\Jeremy\source\repos\libnit\bin\</OutputPath>
+    <PackageOutputPath>$(SolutionDir)nupkg</PackageOutputPath>
+     <NuspecFile>$(SolutionDir)nit.nuspec</NuspecFile>
   </PropertyGroup>
 
   <ItemGroup>

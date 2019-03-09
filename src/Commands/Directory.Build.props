@@ -4,9 +4,7 @@
     </ItemGroup>
 
     <PropertyGroup>
-        <PackAsTool>false</PackAsTool>    
         <TargetFramework>netcoreapp2.2</TargetFramework>
-        <OutputType>Exe</OutputType>
     </PropertyGroup>
   
     <ItemGroup>  
@@ -18,5 +16,6 @@
 
     <PropertyGroup>
         <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+        <Configurations>Release;Debug;</Configurations>
     </PropertyGroup>
 </Project>
