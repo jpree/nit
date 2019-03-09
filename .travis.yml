@@ -5,6 +5,6 @@ dist: xenial
 dotnet: 2.2
 solution: libnit.sln
 script:
- - dotnet restore
- - dotnet build -c release -r win10-x64
+ - dotnet build -c release
+ - dotnet pack -c release
  - dotnet test

@@ -2,13 +2,17 @@
 
   <PropertyGroup>
     <PackAsTool>true</PackAsTool>
-    <RootNamespace>nit</RootNamespace>
+    <RootNamespace>Nit</RootNamespace>
     <PackageOutputPath>$(SolutionDir)nupkg</PackageOutputPath>
-     <NuspecFile>$(SolutionDir)nit.nuspec</NuspecFile>
+    <!-- <NuspecFile>$(SolutionDir)nit.nuspec</NuspecFile> -->
+    <OutputType>Exe</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Libs\libnit\libnit.csproj" />
+    <ProjectReference Include="..\nit-add\nit-add.csproj" />
+    <ProjectReference Include="..\nit-cat-file\nit-cat-file.csproj" />
+    <ProjectReference Include="..\nit-node\nit-node.csproj" />
   </ItemGroup>
 
 </Project>

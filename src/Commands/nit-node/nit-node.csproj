@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <RootNamespace>nit</RootNamespace>
+    <RootNamespace>Nit.Node</RootNamespace>
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 

@@ -12,13 +12,13 @@
         /// Main function to handle calling extensions.
         /// </summary>
         /// <param name="args">Program arguments.</param>
-        /// <returns>Extension exit code.</returns>
+        /// <returns>Internal or extension exit code.</returns>
         private static int Main(string[] args)
         {
             try
             {
                 Guard.ThrowIfEmpty(args, nameof(args));
-                return Command.Run(args);
+                return Command.TryRunInternal(args) ?? Command.RunExternalExtension(args);
             }
             catch (ArgumentException)
             {

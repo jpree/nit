@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <RootNamespace>nit</RootNamespace>
+    <RootNamespace>Nit.CatFile</RootNamespace>
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 

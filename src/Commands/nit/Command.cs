@@ -1,6 +1,7 @@
 ﻿namespace Nit
 {
     using System;
+    using System.Collections.Generic;
     using System.Diagnostics;
     using System.Threading;
 
@@ -12,11 +13,33 @@
         private static bool Processing { get; set; } = true;
 
         /// <summary>
+        /// Runs internal commands.
+        /// </summary>
+        /// <param name="args">Command line arguments.</param>
+        /// <returns>Exit code.</returns>
+        public static int? TryRunInternal(string[] args)
+        {
+            var command = args[0];
+            var commandArgs = args.AsSpan(1, args.Length - 1).ToArray();
+            switch (command)
+            {
+                case "add":
+                    return Nit.Add.Program.Main(commandArgs);
+                case "node":
+                    return Nit.Node.Program.Main(commandArgs);
+                case "cat-file":
+                    return Nit.CatFile.Program.Main(commandArgs);
+                default:
+                    return null;
+            }
+        }
+
+        /// <summary>
         /// Runs the nit extension.
         /// </summary>
         /// <param name="args">Arguments to pass along.</param>
         /// <returns>Exit code of extension.</returns>
-        public static int Run(string[] args)
+        public static int RunExternalExtension(string[] args)
         {
             var command = args[0];
             var proc = new Process();

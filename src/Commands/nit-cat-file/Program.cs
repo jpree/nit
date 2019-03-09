@@ -1,4 +1,4 @@
-﻿namespace Nit
+﻿namespace Nit.CatFile
 {
     using System;
     using System.Text;
@@ -8,14 +8,14 @@
     /// <summary>
     /// Main extension class.
     /// </summary>
-    internal class Program
+    public class Program
     {
         /// <summary>
         /// Main function.
         /// </summary>
         /// <param name="args">Extension arguments.</param>
         /// <returns>Exit code.</returns>
-        private static int Main(string[] args)
+        public static int Main(string[] args)
         {
             var app = new CommandLineApplication();
             app.Name = "nit-node";
