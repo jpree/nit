@@ -6,5 +6,10 @@ dotnet: 2.2
 solution: libnit.sln
 script:
  - dotnet build -c release
- - dotnet pack -c release
  - dotnet test
+ stages:
+  - name: deploy
+    # require the branch name to be master (note for PRs this is the base branch name)
+    if: branch = master
+      script:
+       - dotnet pack -c release
