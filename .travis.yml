@@ -18,7 +18,7 @@ deploy:
       branch: master
     script: >-
       dotnet pack -c release --version-suffix $TRAVIS_TAG &&
-      dotnet nuget push .\nupkg\nit.*-$TRAVIS_TAG.nupkg -k $NugetApiKey -s https://www.nuget.org
+      dotnet nuget push ./nupkg/nit.*-$TRAVIS_TAG.nupkg -k $NugetApiKey -s https://www.nuget.org
 env:
   global:
     secure: YMgPDkE/n2p8FOPduHqiW8UIcNu7UOYygMrHAnWGZsyO8gUZEI0Jh3TdfBypTPm5cOjygfegLtxOnqWFBWD/2BFsV/uEVkRRCmk9LvQ6C+KVZ1CWLDBjp7eQ3eSwD3CXbxkq8gGaCuqbMoBjQfvfzP19tFguK5DMriPCoJMRo5URpzwb5wnRUG9NOTNK5QQ9mJYoXB4UB/utIekQjYV7jWRP9NjZoBX/uOYGRcQCLW7sOLFBweGpiB4R2nhTVkS0NkUvIX2B1Ms3ArgqRVsINjc9jU5ZYKpq9gYqE6nZyqiQeODpCDfsc+8ia9hFJFf7MkDd+HhUOJnIBZi/a4K9DZcltY9ISMrlQH+BQ+m5B/lGPV1juAiNfnHqsTrelirJhJPG3eqxEGWMvogFx2X+YTnQi3XDOBFM4W+UDWnIhxPvZ2IDhdMskva/hvIKTqBpqg71s/Z7dyFF5YGgGEKHo1TH/IcsGQTxor/S0+VuX6gdmM3j2HZK9XXh1wkh/9FFOAE0lw2/JjCUW6vyv+14wRCvW7jxrjmeiX1QmuHMUaKpJFJQ9XvHHp4nAjda+si4RblCkRcUyOw2pIieVrnb/6pTO2HJ5ZC6DGNkedF0emFr2mD6RYr/UaNcX9rI11CdobsGT03mCqfDNbRrg1VctTq6/t1jIWQVfdQFxx6WwBY=
