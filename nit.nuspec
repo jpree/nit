@@ -18,15 +18,16 @@
         <file src="LICENSE.MD" target="" />
         <file src="DotnetToolSettings.xml" target="tools/netcoreapp2.1/any/DotnetToolSettings.xml" />
         
-        <file src="src\Commands\nit\obj\netcoreapp2.2\win10-x64\host\nit.exe" target="tools/netcoreapp2.1/any/" />
-        <file src="src\Commands\nit\bin\Release\netcoreapp2.2\nit.dll" target="tools/netcoreapp2.1/any/" />
-        <file src="src\Commands\nit\bin\Release\netcoreapp2.2\nit.runtimeconfig.json" target="tools/netcoreapp2.1/any/" />
-        <file src="src\Libs\libnit\bin\Release\netcoreapp2.2\libnit.dll" target="tools/netcoreapp2.1/any/" />   
+        <!-- <file src="src\Commands\nit\obj\netcoreapp2.2\win10-x64\host\nit.exe" target="tools/netcoreapp2.1/any/" />
+        <file src="src\Commands\nit\bin\Release\netcoreapp2.2\nit.runtimeconfig.json" target="tools/netcoreapp2.1/any/" /> -->
 
+        <file src="src\Commands\nit\bin\Release\netcoreapp2.2\nit.dll" target="tools/netcoreapp2.1/any/" />        
+        <file src="src\Libs\libnit\bin\Release\netcoreapp2.2\libnit.dll" target="tools/netcoreapp2.1/any/" />
+        
         <file src="src\Commands\nit-add\bin\Release\netcoreapp2.2\nit-add.dll" target="tools/netcoreapp2.1/any/" />
         <file src="src\Commands\nit-node\bin\Release\netcoreapp2.2\nit-node.dll" target="tools/netcoreapp2.1/any/" />
         <file src="src\Commands\nit-cat-file\bin\Release\netcoreapp2.2\nit-cat-file.dll" target="tools/netcoreapp2.1/any/" />
-        
+
         <file src="src\Commands\nit-node\obj\netcoreapp2.2\win10-x64\host\nit-node.exe" target="tools/netcoreapp2.1/any/" />
         <file src="src\Commands\nit-add\obj\netcoreapp2.2\win10-x64\host\nit-add.exe" target="tools/netcoreapp2.1/any/" />
         <file src="src\Commands\nit-cat-file\obj\netcoreapp2.2\win10-x64\host\nit-cat-file.exe" target="tools/netcoreapp2.1/any/" />

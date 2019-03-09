@@ -6,5 +6,5 @@ dotnet: 2.2
 solution: libnit.sln
 script:
  - dotnet restore
- - dotnet build -c release
+ - dotnet build -c release -r win10-x64
  - dotnet test
