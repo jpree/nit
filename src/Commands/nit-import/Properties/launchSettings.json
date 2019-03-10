@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "nit-import": {
+      "commandName": "Project",
+      "commandLineArgs": "-f C:\\temp\\test.txt"
+    }
+  }
+}

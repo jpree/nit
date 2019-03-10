@@ -8,6 +8,12 @@
 
     public static class Lookup
     {
+        /// <summary>
+        /// Tagged content sorted by hit count.
+        /// </summary>
+        /// <param name="tags">Tags to look up.</param>
+        /// <param name="sampleSize">Max size of text to return.</param>
+        /// <returns>Truncated content of blobs sorted by keyword hit count.</returns>
         public static IEnumerable<string> GetTaggedContentByFrequency(string[] tags, uint sampleSize)
         {
             // matches, sorted by frequency
@@ -19,6 +25,11 @@
             }
         }
 
+        /// <summary>
+        /// Gets dictionary of all blob identities to number of keyword hits.
+        /// </summary>
+        /// <param name="tags">Tags to look for.</param>
+        /// <returns>Dictionary of blob hash identities to kit count.</returns>
         public static Dictionary<byte[], uint> GetKeywordDictionary(string[] tags)
         {
             Guard.ThrowIfEmpty(tags, nameof(tags));
@@ -28,7 +39,7 @@
 
             foreach (var tag in tags)
             {
-                var tagHash = Hash.HashString(tag);
+                var tagHash = Hash.HashString(tag.ToUpper());
                 var tagPath = NitPath.GetFullTagPath(tagHash);
 
                 if (File.Exists(tagPath))
