@@ -38,7 +38,7 @@
         [Fact]
         public void CreateTagIndex()
         {
-            var expectedFilePath = Path.Combine(".", $"{nameof(TagTests)}", "tag", "532E", "AABD9574880DBF76B9B8CC00832C20A6EC113D682299550D7A6E0F345E25");
+            var expectedFilePath = Path.Combine(".", $"{nameof(TagTests)}", "tag", "94EE", "059335E587E501CC4BF90613E0814F00A7B08BC7C648FD865A2AF6A22CC2");
             var tag = "Test";
             var tags = new List<string>();
             tags.Add(tag);

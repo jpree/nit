@@ -32,17 +32,6 @@
                 {
                     if (contentOpt.HasValue())
                     {
-                        var sampleSize = uint.TryParse(sampleOpt.Value(), out var i) ? i : 100;
-                        var concat = string.Join(' ', tagsOpt.Values);
-                        var tags = concat.ToUpper(CultureInfo.InvariantCulture).Split(' ', StringSplitOptions.RemoveEmptyEntries);
-                        var result = Lookup.GetTaggedContentByFrequency(tags, sampleSize);
-                        foreach (var match in result)
-                        {
-                            Console.WriteLine(match);
-                        }
-                    }
-                    else
-                    {
                         var concat = string.Join(' ', tagsOpt.Values);
                         var tags = concat.ToUpper(CultureInfo.InvariantCulture).Split(' ', StringSplitOptions.RemoveEmptyEntries);
                         var result = Lookup.GetKeywordDictionary(tags);
@@ -50,6 +39,17 @@
                         {
                             var value = ((Span<byte>)match.Key).GetHexString();
                             Console.WriteLine($"{value}\t {match.Value}");
+                        }
+                    }
+                    else
+                    {
+                        var sampleSize = uint.TryParse(sampleOpt.Value(), out var i) ? i : 100;
+                        var concat = string.Join(' ', tagsOpt.Values);
+                        var tags = concat.ToUpper(CultureInfo.InvariantCulture).Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                        var result = Lookup.GetTaggedContentByFrequency(tags, sampleSize);
+                        foreach (var match in result)
+                        {
+                            Console.WriteLine(match);
                         }
                     }
 

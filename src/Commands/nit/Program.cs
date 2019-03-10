@@ -20,10 +20,10 @@
                 Guard.ThrowIfEmpty(args, nameof(args));
                 return Command.TryRunInternal(args) ?? Command.RunExternalExtension(args);
             }
-            catch (ArgumentException)
-            {
-                Console.WriteLine($"nit <command> -[options] [parameters]");
-            }
+            //catch (ArgumentException)
+            //{
+            //    Console.WriteLine($"nit <command> -[options] [parameters]");
+            //}
             catch (Exception e)
             {
                 var backup = Console.ForegroundColor;

@@ -15,7 +15,7 @@
         {
             foreach (var tag in tags)
             {
-                var tagHash = Hash.HashString(tag);
+                var tagHash = Hash.HashString(tag.ToUpper());
                 var fullPath = NitPath.GetFullTagPath(tagHash);
                 var directoryPath = NitPath.GetTagDirectoryPath(tagHash);
 

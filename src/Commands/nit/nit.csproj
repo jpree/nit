@@ -12,6 +12,7 @@
     <ProjectReference Include="..\..\Libs\libnit\libnit.csproj" />
     <ProjectReference Include="..\nit-add\nit-add.csproj" />
     <ProjectReference Include="..\nit-cat-file\nit-cat-file.csproj" />
+    <ProjectReference Include="..\nit-import\nit-import.csproj" />
     <ProjectReference Include="..\nit-node\nit-node.csproj" />
   </ItemGroup>
 

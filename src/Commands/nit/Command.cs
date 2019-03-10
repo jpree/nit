@@ -29,6 +29,8 @@
                     return Nit.Node.Program.Main(commandArgs);
                 case "cat-file":
                     return Nit.CatFile.Program.Main(commandArgs);
+                case "import":
+                    return Nit.Import.Program.Main(commandArgs);
                 default:
                     return null;
             }

@@ -53,7 +53,6 @@
             var tags = new List<string>();
             tags.Add("Scoobie");
             tags.Add("Doo");
-            tags.Add("And");
             tags.Add("Shaggy");
             Tag.CreateTags(this.target1, tags.ToArray());
         }
@@ -100,7 +99,6 @@
             var tags = new List<string>();
             tags.Add("Scoobie");
             tags.Add("Doo");
-            tags.Add("And");
             tags.Add("Shaggy");
 
             // use query to get suggested blobs
@@ -110,7 +108,7 @@
             Assert.Single(dict);
 
             // should be two hits
-            Assert.Equal<uint>(4, dict[this.target1]);
+            Assert.Equal<uint>(3, dict[this.target1]);
         }
 
         [Fact]
