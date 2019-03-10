@@ -25,7 +25,7 @@
             {
                 case "add":
                     return Nit.Add.Program.Main(commandArgs);
-                case "node":
+                case "object":
                     return Nit.Node.Program.Main(commandArgs);
                 case "cat-file":
                     return Nit.CatFile.Program.Main(commandArgs);

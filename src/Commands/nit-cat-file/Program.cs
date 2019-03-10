@@ -18,7 +18,7 @@
         public static int Main(string[] args)
         {
             var app = new CommandLineApplication();
-            app.Name = "nit-node";
+            app.Name = "nit-cat-file";
             app.Description = "Read back an object.";
             app.HelpOption("-?|-h|--help");
 

@@ -18,7 +18,7 @@
         public static int Main(string[] args)
         {
             var app = new CommandLineApplication();
-            app.Name = "nit-node";
+            app.Name = "nit-object";
             app.Description = "Get objects that match tags.";
             app.HelpOption("-?|-h|--help");
 
