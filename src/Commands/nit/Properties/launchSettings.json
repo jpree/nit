@@ -2,7 +2,7 @@
   "profiles": {
     "nit": {
       "commandName": "Project",
-      "commandLineArgs": "import --file test.md",
+      "commandLineArgs": "-?",
       "workingDirectory": "C:\\temp"
     }
   }

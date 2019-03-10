@@ -2,6 +2,7 @@
 {
     using System;
     using Libnit;
+    using Nit.Properties;
 
     /// <summary>
     /// Main program for calling extensions.
@@ -18,12 +19,17 @@
             try
             {
                 Guard.ThrowIfEmpty(args, nameof(args));
-                return Command.TryRunInternal(args) ?? Command.RunExternalExtension(args);
+                if (args[0].Equals("-?", StringComparison.OrdinalIgnoreCase) ||
+                    args[0].Equals("--help", StringComparison.OrdinalIgnoreCase))
+                {
+                    string helpText = Properties.Resources.HelpInfo;
+                    Console.Write(helpText);
+                }
+                else
+                {
+                    return Command.TryRunInternal(args) ?? Command.RunExternalExtension(args);
+                }
             }
-            //catch (ArgumentException)
-            //{
-            //    Console.WriteLine($"nit <command> -[options] [parameters]");
-            //}
             catch (Exception e)
             {
                 var backup = Console.ForegroundColor;
